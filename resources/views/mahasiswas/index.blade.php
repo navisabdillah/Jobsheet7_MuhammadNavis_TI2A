@@ -26,7 +26,7 @@
             <th>Jurusan</th>
             <th>No_Handphone</th>
             <th>Email</th>
-            <th>Tanggal_lahir</th>
+            <th>Tanggal Lahir</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($mahasiswas as $Mahasiswa)
