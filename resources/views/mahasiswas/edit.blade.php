@@ -48,6 +48,16 @@
                         <input type="No_Handphone" name="No_Handphone" class="formcontrol" id="No_Handphone" value="{{ $Mahasiswa->No_Handphone }}" ariadescribedby="No_Handphone" >
                     </div>
 
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="Email" name="Email" class="formcontrol" id="Email" value="{{ $Mahasiswa->Email }}" ariadescribedby="Email" >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Tanggal_lahir">Tanggal_Lahir</label>
+                        <input type="Tanggal_lahir" name="Tanggal_lahir" class="formcontrol" id="Tanggal_lahir" value="{{ $Mahasiswa->Tanggal_lahir }}" ariadescribedby="Tanggal_lahir" >
+                    </div>
+
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
