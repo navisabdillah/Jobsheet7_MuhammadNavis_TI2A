@@ -43,8 +43,20 @@
                         <input type="Jurusan" name="Jurusan" class="form-control" id="Jurusan" value="{{ $Mahasiswa->Jurusan }}" ariadescribedby="Jurusan" >
                     </div>
 
-                   
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="Email" name="Email" class="form-control" id="Email" value="{{ $Mahasiswa->Email }}" ariadescribedby="Email" >
+                    </div>
 
+                    <div class="form-group">
+                        <label for="Alamat">Alamat</label>
+                        <input type="Alamat" name="Alamat" class="form-control" id="Alamat" value="{{ $Mahasiswa->Alamat }}" ariadescribedby="Alamat" >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Tanggal_lahir">Tanggal Lahir</label>
+                        <input type="Tanggal_lahir" name="Tanggal_lahir" class="form-control" id="Jurusan" value="{{ $Mahasiswa->Tanggal_lahir }}" ariadescribedby="Tanggal_lahir" >
+                    </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
