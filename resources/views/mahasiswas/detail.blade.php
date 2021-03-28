@@ -14,9 +14,7 @@
                         <li class="list-group-item"><b>Nama: </b>{{$Mahasiswa->Nama}}</li>
                         <li class="list-group-item"><b>Kelas: </b>{{$Mahasiswa->Kelas}}</li>
                         <li class="list-group-item"><b>Jurusan: </b>{{$Mahasiswa->Jurusan}}</li>
-                        <li class="list-group-item"><b>No_Handphone: </b>{{$Mahasiswa->No_Handphone}}</li>
-                        <li class="list-group-item"><b>Email: </b>{{$Mahasiswa->Email}}</li>
-                        <li class="list-group-item"><b>Tanggal_lahir: </b>{{$Mahasiswa->Tanggal_lahir}}</li>
+                        
                     </ul>
                 </div>
 
