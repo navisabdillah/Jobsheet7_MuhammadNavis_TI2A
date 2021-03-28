@@ -27,6 +27,6 @@ class CreateEmailAlamatTanggalLahirTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('email_alamat_tanggal_lahir');
+        
     }
 }
