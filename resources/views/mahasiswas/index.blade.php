@@ -11,6 +11,7 @@
             </div>
         </div>
     </div>
+    
     <div>
         <div class="mx-auto pull-right">
             <div class="float-left">
