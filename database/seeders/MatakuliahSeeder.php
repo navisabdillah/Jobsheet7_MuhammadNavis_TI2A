@@ -41,5 +41,6 @@ class MatakuliahSeeder extends Seeder
                 'semester'      => 4,
             ],
         ];
+        DB::table('matakuliah')->insert($matkul);
     }
 }

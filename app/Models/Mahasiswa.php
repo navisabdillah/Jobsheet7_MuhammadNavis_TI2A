@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\Mahasiswa as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Mahasiswa;
 
 use Illuminate\Database\Eloquent\Model; // Model Eloquent
 
@@ -33,5 +34,8 @@ class Mahasiswa extends Model  // Definisi Model
     public function kelas()
     {
         return $this->belongsTo(Kelas::class);
+    }
+    public function mahasiswamatakuliah(){
+        return $this->hasMany(Mahasiswa_Matakuliah::class);
     }
 }
