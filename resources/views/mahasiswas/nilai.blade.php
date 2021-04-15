@@ -1,11 +1,11 @@
 @extends('mahasiswas.layout')
 @section('content')
 <div class="row justify-content-center">
-    <div class="col-sm-10">
+    <div class="pull-left mt-2">
         <h2>JURUSAN TEKNOLOGI INFORMASI-POLITEKNIK NEGERI MALANG</h2>
     </div>
-    <div class="col-sm-4">
-        <h2>KARTU HASIL STUDI</h2>
+    <div class="pull-left mt-2">
+        <h2>KARTU HASIL STUDI (KHS)</h2>
     </div>
 </div>
 @if($mahasiswa)
@@ -19,7 +19,6 @@
     <tr>
         <th>Mata Kuliah</th>
         <th>SKS</th>
-        <th>Jam</th>
         <th>Semester</th>
         <th>Nilai</th>
     </tr>
@@ -28,9 +27,8 @@
     <tr>
         <td>{{ $Nilai->matakuliah->nama_matkul }}</td>
         <td>{{ $Nilai->matakuliah->sks }}</td>
-        <td>{{ $Nilai->matakuliah->jam }}</td>
         <td>{{ $Nilai->matakuliah->semester }}</td>
-        <td>{{ $Nilai->mahasiswa_matakuliah->matakuliah->nilai }}</td>
+        <td>{{ $Nilai->nilai }}</td>
     </tr>
     @endforeach
     @endif
