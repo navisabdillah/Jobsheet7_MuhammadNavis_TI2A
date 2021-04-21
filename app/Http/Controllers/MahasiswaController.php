@@ -82,9 +82,9 @@ class MahasiswaController extends Controller
        if($request->file('image')){
         $image_name = $request->file('image')->store('images', 'public');
     } else {
+        $image_name = 'images/navis.png';
         $image_name = 'images/dandi.png';
-        $image_name = 'images/pram.png';
-        $image_name = 'images/auzan.png';
+        $image_name = 'images/muhammad.png';
     }
 
     // Jika data berhasil ditambahkan, akan kembali ke halaman utama
