@@ -51,12 +51,10 @@
                             <label for="Email">Email</label>
                             <input type="Email" name="Email" class="form-control" id="Email" aria-describedby="Email" >
                         </div>
-
                         <div class="form-group">
                             <label for="Alamat">Alamat</label>
                             <input type="Alamat" name="Alamat" class="form-control" id="Alamat" aria-describedby="Alamat" >
-                        </div>
-
+                        </div>   
                         <div class="form-group">
                             <label for="Tanggal_lahir">Tanggal Lahir</label>
                             <input type="Tanggal_lahir" name="Tanggal_lahir" class="form-control" id="Tanggal_lahir" aria-describedby="Tanggal_lahir" >

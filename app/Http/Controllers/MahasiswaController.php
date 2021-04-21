@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Mahasiswa;
 use App\Models\Kelas;
 use App\Models\Mahasiswa_Matakuliah;
+use PDF;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
@@ -78,8 +79,18 @@ class MahasiswaController extends Controller
        // $mahasiswas->kelas()->assocaite($kelas);
        // $mahasiswas->save();
 
-        return redirect()->route('mahasiswas.index')
-            ->with('success', 'Mahasiswa Berhasil Ditambahkan');
+       if($request->file('image')){
+        $image_name = $request->file('image')->store('images', 'public');
+    } else {
+        $image_name = 'images/dandi.png';
+        $image_name = 'images/pram.png';
+        $image_name = 'images/auzan.png';
+    }
+
+    // Jika data berhasil ditambahkan, akan kembali ke halaman utama
+    return redirect()->route('mahasiswas.index')
+        ->with('success', 'Mahasiswa Berhasil Ditambahkan');
+
     }
 
     /**
@@ -168,5 +179,14 @@ class MahasiswaController extends Controller
             ->get();
         return view('mahasiswas.nilai', compact('mahasiswa', 'nilai'));            
     }
-
+    public function cetak_pdf($Nim){
+        $mahasiswa = Mahasiswa_MataKuliah::with('mahasiswa')
+            ->where('mahasiswa_id', $Nim)
+            ->first();
+        $nilai = Mahasiswa_MataKuliah::with('matakuliah')
+            ->where('mahasiswa_id', $Nim)
+            ->get();
+        $pdf = PDF::loadview('mahasiswas.mahasiswas_pdf', compact('mahasiswa', 'nilai'));
+        return $pdf->stream();
+    }
 }
